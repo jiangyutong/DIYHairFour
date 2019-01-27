@@ -229,6 +229,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     }
     
         func requestToken1(userID:String) -> Void {
+<<<<<<< HEAD
 //            LCCQLClient.execute("update nowUser set username=userID where objectId='5c4dbfa667f356004b85071f'") { result in
 //                switch result {
 //                case .success:
@@ -254,10 +255,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                     // handle error
 
                 }
+=======
+            let  query=AVQuery(className: "myuser")
+            query.whereKey("username", matchesRegex: userID)
+            let temp=query.findObjects() as! [AVObject]
+            var url=""
+            if(temp.count>0)
+            {
+                let U=temp[0]["image"] as! AVFile
+                url=U.url!
+                //  let U=temp!["image"] as! AVFile
+                //  photoImageView.image=UIImage(data: U.getData()!)
+                // text.text=temp?["string"] as! String
+>>>>>>> 8caba48070724fca49aa8a1cce91fc24fc276dae
             }
             let dicUser = ["userId":userID,
                            "name":userID,
-                           "portraitUrl":"http://img3.duitang.com/uploads/item/201508/30/20150830083023_N3rTL.png"
+                           "portraitUrl":url
             ] //请求token的用户信息
             let urlStr = "https://api.cn.ronghub.com/user/getToken.json" //网址接口
             let appKey = "kj7swf8ok3ht2"
