@@ -8,9 +8,11 @@
 
 import UIKit
 import Alamofire
+import LeanCloud
 class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate ,UITableViewDelegate{
   var token=""
     var dataArray = NSMutableArray()
+     var dataArray2 = NSMutableArray()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navBarView: UIView!
     @IBOutlet weak var navBarTitle: UILabel!
@@ -62,7 +64,25 @@ class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollVie
        
  
        headerRefresh()
-       
+        footerRefresh()
+        
+//        let obj2=dataArray2[0] as! AVObject
+//        let myname=obj2["username"] as! String
+//        for i in 0..<dataArray.count
+//        {
+//            let obj=dataArray[i] as! AVObject
+//
+//            let idString=obj["username"] as! String
+//            print("username\(myname),idString\(idString)")
+//            if idString==myname
+//            {
+//                dataArray.removeObject(at: i)
+//            }
+//
+//
+//
+//        }
+        
        self.tableView?.reloadData()
 
 //        let tagRecognizer=UITapGestureRecognizer(target: self, action: #selector(tag(recognizer:)))
@@ -113,7 +133,8 @@ class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let personCell=tableView.dequeueReusableCell(withIdentifier: "PersonTableView") as! PersonTableViewCell
-     
+       
+       
         let obj=dataArray[indexPath.row] as! AVObject
          let idString=obj["username"] as! String
           let experience=obj["experience"] as! String
@@ -168,7 +189,7 @@ class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollVie
      */
  func headerRefresh(){
         
-        
+   
         print("headerRefresh\n\n\n\n\n\n\n\n\n\n\n")
         let query = AVQuery(className: "Sharingexperience")
         query.order(byDescending: "createdAt")
@@ -187,12 +208,49 @@ class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollVie
             
           //  self.tableView?.mj_header.beginRefreshing()
             self.tableView?.reloadData()
-            
+          
         }
+   
         
     }
     
+ func footerRefresh(){
+    let query2 = AVQuery(className: "want")
+    query2.whereKey("kind", equalTo: "1")
     
+    
+    //  query.whereKey("user", equalTo: AVUser.current()
+    
+    query2.findObjectsInBackground { (results, error) -> Void in
+        
+        if let Result=results{
+            
+            self.dataArray2.addObjects(from: (Result))
+            let obj2=self.dataArray2[0] as! AVObject
+            let myname=obj2["username"] as! String
+            for i in 0..<self.dataArray.count
+            {
+                let obj=self.dataArray[i] as! AVObject
+                
+                let idString=obj["username"] as! String
+                print("username\(myname),idString\(idString)")
+                if idString==myname
+                {
+                    self.dataArray.removeObject(at: i)
+                }
+                
+                
+                
+            }
+            print("*****************\(self.dataArray2.count)")
+        }
+        
+        //  self.tableView?.mj_header.beginRefreshing()
+        self.tableView?.reloadData()
+        
+    }
+        
+    }
 //    func requestToken1(userID:String) -> Void {
 //        let dicUser = ["userId":userID,
 //                       "name":userID,

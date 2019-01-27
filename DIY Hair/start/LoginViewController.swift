@@ -113,6 +113,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         LCUser.logIn(username: userTF.text!, password: passwordTF.text!) { result in
             switch result {
             case .success(let user):
+                
                 self.requestToken1(userID:self.userTF.text!)
                 button.startSwitchAnimation(1, completion: { [unowned self]() -> () in
                     self.performSegue(withIdentifier: "LoginSuccess", sender: nil)
@@ -127,6 +128,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 })
                 print(error)
             }
+            
         }
         
         
@@ -227,6 +229,32 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     }
     
         func requestToken1(userID:String) -> Void {
+//            LCCQLClient.execute("update nowUser set username=userID where objectId='5c4dbfa667f356004b85071f'") { result in
+//                switch result {
+//                case .success:
+//                    print("保存成功")
+//                break // 更新成功
+//                case .failure(let error):
+//                    print(error)
+//                }
+//            }
+            let todo = LCObject(className: "want", objectId: "5c4ddcd0303f390047374f54")
+          todo.set("username", value:userID)
+           todo.save { (result) in
+                switch result {
+                case .success:
+                       print("保存成功")
+                    break
+                    // handle success
+
+                case .failure(error: let error):
+                     print("保存sb")
+                    print(error);
+                         break
+                    // handle error
+
+                }
+            }
             let dicUser = ["userId":userID,
                            "name":userID,
                            "portraitUrl":"http://img3.duitang.com/uploads/item/201508/30/20150830083023_N3rTL.png"
