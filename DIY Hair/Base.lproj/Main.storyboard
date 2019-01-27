@@ -175,7 +175,11 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+<<<<<<< HEAD
                                             <segue destination="pgO-iV-bsq" kind="show" id="1uE-Sn-uWm"/>
+=======
+                                            <segue destination="pgO-iV-bsq" kind="show" id="zZN-J6-vdO"/>
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rk4-Ef-p8P">
@@ -201,7 +205,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eh0-de-6LP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-4158" y="-1828"/>
+=======
+            <point key="canvasLocation" x="-4124" y="-1872"/>
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Zil-yS-FzO">
@@ -259,7 +267,15 @@
                         <viewLayoutGuide key="safeArea" id="kBj-5u-Se2"/>
                     </view>
                     <navigationItem key="navigationItem" id="nRh-iu-nKL">
+<<<<<<< HEAD
                         <barButtonItem key="leftBarButtonItem" title="&lt;back" style="plain" id="PPc-cv-veE"/>
+=======
+                        <barButtonItem key="leftBarButtonItem" title="&lt;Back" style="plain" id="PPc-cv-veE">
+                            <connections>
+                                <segue destination="ZNj-JL-EIz" kind="presentation" id="CFL-6Z-Tl0"/>
+                            </connections>
+                        </barButtonItem>
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
                     </navigationItem>
                     <connections>
                         <outlet property="goLB" destination="yqB-1m-0rr" id="kvt-hL-Wwa"/>
@@ -273,7 +289,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mo-RK-KbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-2162.4000000000001" y="-1828.3358320839582"/>
+=======
+<<<<<<< HEAD
+            <point key="canvasLocation" x="-2161" y="-1828"/>
+=======
+            <point key="canvasLocation" x="-2356" y="-1931"/>
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
+>>>>>>> 8caba48070724fca49aa8a1cce91fc24fc276dae
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VFZ-9S-E8l">
@@ -285,13 +309,26 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+<<<<<<< HEAD
                         <segue destination="JMo-75-L3G" kind="relationship" relationship="viewControllers" id="CJa-ih-ma7"/>
                         <segue destination="ETa-2t-OfN" kind="relationship" relationship="viewControllers" id="E5k-y7-Fw2"/>
+=======
+                        <segue destination="nV9-uU-jkH" kind="relationship" relationship="viewControllers" id="EzG-vP-MUV"/>
+                        <segue destination="dxW-Kb-NHo" kind="relationship" relationship="viewControllers" id="swK-Wa-DdL"/>
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyw-f2-vib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-1518" y="-1564"/>
+=======
+<<<<<<< HEAD
+            <point key="canvasLocation" x="-1214" y="-1561"/>
+=======
+            <point key="canvasLocation" x="-2438" y="-860"/>
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
+>>>>>>> fe645b19b2bfcbb5ae06a8b42364719a2e20229b
         </scene>
         <!--View Controller-->
         <scene sceneID="m7W-eg-VL7">
@@ -462,6 +499,29 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+<<<<<<< HEAD
+=======
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUK-pz-61p">
+                                        <rect key="frame" x="10" y="3" width="100" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="26" id="6Gb-G1-FBQ"/>
+                                            <constraint firstAttribute="height" constant="26" id="dns-zt-3Fb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="&lt;back">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTe-MJ-2D3">
+                                        <rect key="frame" x="36" y="32" width="0.0" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="QrC-x1-UV5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -537,6 +597,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ZS-TK-8qi" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-898" y="-1436"/>
         </scene>
         <!--消息列表-->
@@ -556,24 +617,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7E-6M-hhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-700" y="-439.43028485757122"/>
+=======
+            <point key="canvasLocation" x="504.80000000000001" y="-1450.5247376311845"/>
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
         </scene>
+<<<<<<< HEAD
         <!--朋友圈-->
         <scene sceneID="QNB-1t-qD9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ETa-2t-OfN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="朋友圈" id="RhA-ky-7be"/>
+=======
+        <!--Sec View Controller-->
+        <scene sceneID="I4g-5e-CCu">
+            <objects>
+                <viewController id="t7p-x3-rUm" customClass="secViewController" customModule="DIY_Hair" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ASv-62-fXN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="EMP-QD-H9G"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7iH-BU-4G0">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="knN-qd-FEi">
+                            <connections>
+                                <action selector="newConversation:" destination="t7p-x3-rUm" id="l1c-hO-y8N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aze-dd-Ixt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="-815"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="h2Z-T7-s2x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nV9-uU-jkH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="1Z6-tN-f4q"/>
+>>>>>>> 8caba48070724fca49aa8a1cce91fc24fc276dae
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Ea-r8-OLJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZMM-tk-Sx1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="niD-pn-FQA" kind="relationship" relationship="rootViewController" id="UZg-Rp-fpF"/>
+                        <segue destination="t7p-x3-rUm" kind="relationship" relationship="rootViewController" id="aCd-97-C3d"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ytP-wE-0Pk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zP2-on-IE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-414" y="-1380"/>
         </scene>
         <!--消息-->
@@ -583,17 +678,37 @@
                     <tabBarItem key="tabBarItem" title="消息" id="oLE-Pv-Uzb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p4I-cl-YJy">
+=======
+            <point key="canvasLocation" x="-1199.2" y="-814.54272863568224"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="PWW-PF-KV9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dxW-Kb-NHo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="DmP-8t-fqL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TxQ-EN-bju">
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+<<<<<<< HEAD
                         <segue destination="9kK-dr-PL2" kind="relationship" relationship="rootViewController" id="BLW-Vj-Gqt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRN-og-hdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1639.2" y="-439.43028485757122"/>
+=======
+                        <segue destination="niD-pn-FQA" kind="relationship" relationship="rootViewController" id="KfC-A4-06N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wRk-HG-z27" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-434.39999999999998" y="-1451.4242878560722"/>
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
         </scene>
     </scenes>
     <resources>
@@ -602,6 +717,10 @@
         <image name="眼睛" width="89" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
+=======
+        <segue reference="CFL-6Z-Tl0"/>
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
         <segue reference="Wta-Cq-qEG"/>
     </inferredMetricsTieBreakers>
 </document>
