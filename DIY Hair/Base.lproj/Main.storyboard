@@ -219,7 +219,7 @@
                                 <rect key="frame" x="0.0" y="25" width="375" height="642"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机/邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bd-GZ-RiB">
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机/邮箱/账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bd-GZ-RiB">
                                         <rect key="frame" x="95" y="247" width="197" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
@@ -252,6 +252,16 @@
                                             <action selector="change:" destination="pgO-iV-bsq" eventType="touchUpInside" id="gzi-1P-gDA"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P72-xw-xwd">
+                                        <rect key="frame" x="1" y="8" width="123" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="&lt;Back">
+                                            <color key="titleColor" red="1" green="0.52805058485621492" blue="0.67274307794369059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ZNj-JL-EIz" kind="show" id="khr-QF-yRd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                         </subviews>
@@ -273,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mo-RK-KbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2162.4000000000001" y="-1828.3358320839582"/>
+            <point key="canvasLocation" x="-2604" y="-1794.1529235382311"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VFZ-9S-E8l">
@@ -602,6 +612,7 @@
         <image name="眼睛" width="89" height="55"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="khr-QF-yRd"/>
         <segue reference="Wta-Cq-qEG"/>
     </inferredMetricsTieBreakers>
 </document>

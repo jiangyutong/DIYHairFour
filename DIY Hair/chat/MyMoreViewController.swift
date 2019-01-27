@@ -64,7 +64,7 @@ class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollVie
        
  
        headerRefresh()
-        footerRefresh()
+        //footerRefresh()
         
 //        let obj2=dataArray2[0] as! AVObject
 //        let myname=obj2["username"] as! String
@@ -214,43 +214,44 @@ class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollVie
         
     }
     
- func footerRefresh(){
-    let query2 = AVQuery(className: "want")
-    query2.whereKey("kind", equalTo: "1")
-    
-    
-    //  query.whereKey("user", equalTo: AVUser.current()
-    
-    query2.findObjectsInBackground { (results, error) -> Void in
-        
-        if let Result=results{
-            
-            self.dataArray2.addObjects(from: (Result))
-            let obj2=self.dataArray2[0] as! AVObject
-            let myname=obj2["username"] as! String
-            for i in 0..<self.dataArray.count
-            {
-                let obj=self.dataArray[i] as! AVObject
-                
-                let idString=obj["username"] as! String
-                print("username\(myname),idString\(idString)")
-                if idString==myname
-                {
-                    self.dataArray.removeObject(at: i)
-                }
-                
-                
-                
-            }
-            print("*****************\(self.dataArray2.count)")
-        }
-        
-        //  self.tableView?.mj_header.beginRefreshing()
-        self.tableView?.reloadData()
-        
-    }
-        
-    }
+// func footerRefresh(){
+//    let query2 = AVQuery(className: "want")
+//    query2.whereKey("kind", equalTo: "1")
+//
+//
+//    //  query.whereKey("user", equalTo: AVUser.current()
+//
+//    query2.findObjectsInBackground { (results, error) -> Void in
+//
+//        if let Result=results{
+//
+//            self.dataArray2.addObjects(from: (Result))
+//            let obj2=self.dataArray2[0] as! AVObject
+//            let myname=obj2["username"] as! String
+//            for i in 0..<self.dataArray.count
+//            {
+//                let obj=self.dataArray[i] as! AVObject
+//
+//                let idString=obj["username"] as! String
+//                print("username\(myname),idString\(idString)")
+//                if idString==myname
+//                {
+//                    self.dataArray.removeObject(at: i)
+//                }
+//
+//
+//
+//            }
+//            print("*****************2\(self.dataArray2.count)")
+//            print("*****************1\(self.dataArray.count)")
+//        }
+//
+//        //  self.tableView?.mj_header.beginRefreshing()
+//        self.tableView?.reloadData()
+//
+//    }
+//
+//    }
 //    func requestToken1(userID:String) -> Void {
 //        let dicUser = ["userId":userID,
 //                       "name":userID,
