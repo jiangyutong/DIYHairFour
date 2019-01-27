@@ -128,8 +128,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 print(error)
             }
         }
-
-
+        
+        
 //        if passwordTF.text=="admin"&&userTF.text=="admin" as String as String {
 //            // 成功，进行界面切换
 //            button.startSwitchAnimation(1, completion: { [unowned self]() -> () in
@@ -147,6 +147,37 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
 //            })
 //        }
         
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("jyt")
+        if let username=userTF.text
+        {
+            startAnimation()
+            let  query=AVQuery(className: "myuser")
+            query.whereKey("username", equalTo: username)
+            let temp=query.findObjects() as! [AVObject]
+            if(temp.count>0)
+            {
+                let U=temp[0]["image"] as! AVFile
+                self.headimage.image=UIImage(data: U.getData()!)
+            }
+            //            let  query = LCQuery(className: "myuser")
+            //            query.whereKey("username", .equalTo(username))
+            //            query.find { result in
+            //                switch result {
+            //                case .success(let todos):
+            //                    // 每一页 10 条数据，跳过了 20 条数据，因此获取的是第 3 页的数据
+            //                     print("great")
+            //                    guard let todo = todos.first else { return }
+            //                    let U=todo.get("image") as! AVFile
+            //                    self.headimage.image=UIImage(data: U.getData()!)
+            //
+            //                case .failure(let error):
+            //                    print(error)
+            //                }
+            //            }
+        }
+        textField.resignFirstResponder()
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("jyt")

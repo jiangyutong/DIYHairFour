@@ -291,7 +291,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyw-f2-vib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1214" y="-1561"/>
+            <point key="canvasLocation" x="-1518" y="-1564"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m7W-eg-VL7">
@@ -442,7 +442,7 @@
             </objects>
             <point key="canvasLocation" x="-2105" y="-2493"/>
         </scene>
-        <!--diy hair-->
+        <!--朋友圈-->
         <scene sceneID="qIm-Ls-knM">
             <objects>
                 <viewController storyboardIdentifier="FourMyMoreViewController" id="niD-pn-FQA" customClass="MyMoreViewController" customModule="DIY_Hair" customModuleProvider="target" sceneMemberID="viewController">
@@ -526,8 +526,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mdd-tc-i5A"/>
                     </view>
-                    <navigationItem key="navigationItem" title="diy hair" id="ads-0i-MPO">
-                        <barButtonItem key="backBarButtonItem" title="diy hair" id="UQo-XQ-6ss"/>
+                    <navigationItem key="navigationItem" title="朋友圈" id="ads-0i-MPO">
+                        <barButtonItem key="backBarButtonItem" title="朋友圈" id="UQo-XQ-6ss"/>
                     </navigationItem>
                     <connections>
                         <outlet property="navBarTitle" destination="y9W-uR-Wfd" id="UmZ-W0-xMg"/>
