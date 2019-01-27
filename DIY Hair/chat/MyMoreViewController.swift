@@ -22,12 +22,7 @@ class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollVie
     var bgImgHeight: CGFloat = 0
     var headerHeight: CGFloat = 0
     var originalFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
-    var tableTitile=["个人设置","安全设置","小小设置"]
-     var personSetup=["双卡与移动网络","WLAN","个人热点","蓝牙","勿扰模式","状态栏与通知"]
-    var securitySetup=["定位服务","账号与同步","云服务","黑名单","相册","指纹识别"]
-     var littleSetup=["退出登录"]
-     var image1=["1","2","3","4","5","6","7","8"]
-     var image2=["14","13","7","8","9","10","11","12"]
+ 
     let ratio: CGFloat = 880/1279// 图片宽高比例
     
     let cellId = "UITableViewCell"
@@ -64,7 +59,7 @@ class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollVie
        headerRefresh()
        
        self.tableView?.reloadData()
-setNavigationBar()
+
 //        let tagRecognizer=UITapGestureRecognizer(target: self, action: #selector(tag(recognizer:)))
 //       images3[0].addGestureRecognizer(tagRecognizer)
 //        tagRecognizer.numberOfTapsRequired=1
@@ -102,39 +97,14 @@ setNavigationBar()
         
         
       
-        self.navigationController?.show(chat!, sender: nil)
+        //self.navigationController?.show(chat!, sender: nil)
        // self.navigationController.
        // self.navigationController?.popToViewController(chat!, animated: true)
-       // self.navigationController?.pushViewController(chat!, animated: true)
-       // self.present(chat!, animated: true, completion: nil)
+        self.navigationController?.pushViewController(chat!, animated: true)
+        self.tabBarController?.tabBar.isHidden=true
+       //self.present(chat!, animated: true, completion: nil)
     }
-    func setNavigationBar(){
-        
-        
-        navigationView = UIView(frame:  CGRect(x: 0, y: -20, width: 45, height: 65))
-        navigationView.backgroundColor = UIColor.white
-        self.navigationController?.navigationBar.addSubview(navigationView)
-        
-        CGRect(x: 20, y: 20, width:45, height: 45)
-        let addBookBtn = UIButton(frame: CGRect(x: 20, y: 20, width: 45, height: 45))
-        
-        addBookBtn.setTitleColor(UIColor.black, for: .normal)
-        addBookBtn.setTitle("<back", for: .normal)
    
-        addBookBtn.contentHorizontalAlignment = .left        //按钮文字现实居左
-        
-        addBookBtn.addTarget(self, action:#selector(goback), for: .touchUpInside)
-        
-        
-        navigationView.addSubview(addBookBtn)
-        
-    }
-    @objc func goback(){
-        print("pushNewPost")
-        
-        
-        self.present(LoginViewController(), animated: true, completion: nil)
-    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let personCell=tableView.dequeueReusableCell(withIdentifier: "PersonTableView") as! PersonTableViewCell
