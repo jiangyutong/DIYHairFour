@@ -22,12 +22,7 @@ class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollVie
     var bgImgHeight: CGFloat = 0
     var headerHeight: CGFloat = 0
     var originalFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
-    var tableTitile=["个人设置","安全设置","小小设置"]
-     var personSetup=["双卡与移动网络","WLAN","个人热点","蓝牙","勿扰模式","状态栏与通知"]
-    var securitySetup=["定位服务","账号与同步","云服务","黑名单","相册","指纹识别"]
-     var littleSetup=["退出登录"]
-     var image1=["1","2","3","4","5","6","7","8"]
-     var image2=["14","13","7","8","9","10","11","12"]
+ 
     let ratio: CGFloat = 880/1279// 图片宽高比例
     
     let cellId = "UITableViewCell"
@@ -102,14 +97,24 @@ class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollVie
      
         
         
+<<<<<<< HEAD
        self.tabBarController?.tabBar.isHidden=true
         self.navigationController?.show(chat!, sender: nil)
+=======
+      
+        //self.navigationController?.show(chat!, sender: nil)
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
        // self.navigationController.
        // self.navigationController?.popToViewController(chat!, animated: true)
-       // self.navigationController?.pushViewController(chat!, animated: true)
-       // self.present(chat!, animated: true, completion: nil)
+        self.navigationController?.pushViewController(chat!, animated: true)
+        self.tabBarController?.tabBar.isHidden=true
+       //self.present(chat!, animated: true, completion: nil)
     }
+<<<<<<< HEAD
   
+=======
+   
+>>>>>>> e0ba979ea39fc66b5746dd074bfa840678dfe688
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let personCell=tableView.dequeueReusableCell(withIdentifier: "PersonTableView") as! PersonTableViewCell
