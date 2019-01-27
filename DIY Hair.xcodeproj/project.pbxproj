@@ -21,6 +21,8 @@
 		EEA44ED421B61EA10070F483 /* HairDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA44ED321B61EA10070F483 /* HairDetails.swift */; };
 		EEA44ED621B61FF90070F483 /* HairListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA44ED521B61FF90070F483 /* HairListTableViewCell.swift */; };
 		EEA44ED821B622400070F483 /* HairListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA44ED721B622400070F483 /* HairListTableViewController.swift */; };
+		F4113BD321FDCD8500E5698F /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4113BD121FDCD8400E5698F /* MessageViewController.swift */; };
+		F4113BD421FDCD8500E5698F /* secViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4113BD221FDCD8400E5698F /* secViewController.swift */; };
 		F4130C0721FC8B430012474C /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4130C0621FC8B420012474C /* PersonTableViewCell.swift */; };
 		F4130C0B21FC8B580012474C /* MyMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4130C0A21FC8B560012474C /* MyMoreViewController.swift */; };
 		F4130C2221FCB85D0012474C /* NineLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4130C2121FCB85C0012474C /* NineLockView.swift */; };
@@ -91,6 +93,8 @@
 		EEA44ED321B61EA10070F483 /* HairDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairDetails.swift; sourceTree = "<group>"; };
 		EEA44ED521B61FF90070F483 /* HairListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairListTableViewCell.swift; sourceTree = "<group>"; };
 		EEA44ED721B622400070F483 /* HairListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairListTableViewController.swift; sourceTree = "<group>"; };
+		F4113BD121FDCD8400E5698F /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		F4113BD221FDCD8400E5698F /* secViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secViewController.swift; sourceTree = "<group>"; };
 		F4130C0621FC8B420012474C /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		F4130C0A21FC8B560012474C /* MyMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMoreViewController.swift; sourceTree = "<group>"; };
 		F4130C2121FCB85C0012474C /* NineLockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NineLockView.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 		B136C5C81FEE80B200658B76 /* DIY Hair */ = {
 			isa = PBXGroup;
 			children = (
+				F4113BD021FDCD8400E5698F /* Message */,
 				F4130C1D21FC90CB0012474C /* chat */,
 				F4130C1A21FC8BEF0012474C /* nineLockView */,
 				F414F8AC21F4CDFE00FB914D /* EWAddressPicker */,
@@ -237,6 +242,15 @@
 				EEA44ED721B622400070F483 /* HairListTableViewController.swift */,
 			);
 			path = myHairList;
+			sourceTree = "<group>";
+		};
+		F4113BD021FDCD8400E5698F /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				F4113BD121FDCD8400E5698F /* MessageViewController.swift */,
+				F4113BD221FDCD8400E5698F /* secViewController.swift */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 		F4130C1A21FC8BEF0012474C /* nineLockView */ = {
@@ -551,6 +565,7 @@
 				EE9B55272176D4A2002D3DE1 /* AppDelegate.swift in Sources */,
 				F4D9703821F44F0C00E0A65F /* RadioButtonViewController.swift in Sources */,
 				F4D9705421F4B9C900E0A65F /* LoginSuccessController.swift in Sources */,
+				F4113BD321FDCD8500E5698F /* MessageViewController.swift in Sources */,
 				F414F8B521F4CE0D00FB914D /* EWAddressPickView.swift in Sources */,
 				F454E17D21F3591A00D1760D /* DKViewControllerExt.swift in Sources */,
 				F414F8B821F4CE0D00FB914D /* EWAddressModel.swift in Sources */,
@@ -569,6 +584,7 @@
 				EEA44ED621B61FF90070F483 /* HairListTableViewCell.swift in Sources */,
 				B11AA22E1FF0E7C500F98203 /* NSString+SHA1.m in Sources */,
 				EEA44ED221B6181D0070F483 /* RatingControl.swift in Sources */,
+				F4113BD421FDCD8500E5698F /* secViewController.swift in Sources */,
 				F4D9705521F4B9C900E0A65F /* PQButton.swift in Sources */,
 				F454E14A21F3537D00D1760D /* LoginViewController.swift in Sources */,
 				F4130C2221FCB85D0012474C /* NineLockView.swift in Sources */,

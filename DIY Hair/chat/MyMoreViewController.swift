@@ -64,13 +64,17 @@ class MyMoreViewController: UIViewController, UITableViewDataSource, UIScrollVie
        headerRefresh()
        
        self.tableView?.reloadData()
-setNavigationBar()
+
 //        let tagRecognizer=UITapGestureRecognizer(target: self, action: #selector(tag(recognizer:)))
 //       images3[0].addGestureRecognizer(tagRecognizer)
 //        tagRecognizer.numberOfTapsRequired=1
 //        tagRecognizer.numberOfTouchesRequired=2
     }
-  
+    override func viewDidAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden=false
+    }
+    
+    
    
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
@@ -80,10 +84,7 @@ setNavigationBar()
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
+   
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -101,40 +102,14 @@ setNavigationBar()
      
         
         
-      
+       self.tabBarController?.tabBar.isHidden=true
         self.navigationController?.show(chat!, sender: nil)
        // self.navigationController.
        // self.navigationController?.popToViewController(chat!, animated: true)
        // self.navigationController?.pushViewController(chat!, animated: true)
        // self.present(chat!, animated: true, completion: nil)
     }
-    func setNavigationBar(){
-        
-        
-        navigationView = UIView(frame:  CGRect(x: 0, y: -20, width: 45, height: 65))
-        navigationView.backgroundColor = UIColor.white
-        self.navigationController?.navigationBar.addSubview(navigationView)
-        
-        CGRect(x: 20, y: 20, width:45, height: 45)
-        let addBookBtn = UIButton(frame: CGRect(x: 20, y: 20, width: 45, height: 45))
-        
-        addBookBtn.setTitleColor(UIColor.black, for: .normal)
-        addBookBtn.setTitle("<back", for: .normal)
-   
-        addBookBtn.contentHorizontalAlignment = .left        //按钮文字现实居左
-        
-        addBookBtn.addTarget(self, action:#selector(goback), for: .touchUpInside)
-        
-        
-        navigationView.addSubview(addBookBtn)
-        
-    }
-    @objc func goback(){
-        print("pushNewPost")
-        
-        
-        self.present(LoginViewController(), animated: true, completion: nil)
-    }
+  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         let personCell=tableView.dequeueReusableCell(withIdentifier: "PersonTableView") as! PersonTableViewCell
